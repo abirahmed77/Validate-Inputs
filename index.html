@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: rgb(152, 188, 255);
+        padding: 20px;
+        font-family: cursive;
+      }
+
+      input {
+        color: rgb(65, 0, 115);
+        font-weight: bold;
+        background-color: rgb(255, 215, 215);
+      }
+
+      h2 {
+        color: rgb(112, 1, 171);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Validate of 'Name and Age'</h2>
+    <hr />
+
+    <form name="myForm" onsubmit="validateForm()">
+      Name: <input type="text" name="fname" /> <br />
+      <br />
+
+      Age: <input id="id1" type="number" min="18" /> <br />
+      <br />
+
+      <input type="submit" value="Login" />
+
+      <p id="message"></p>
+    </form>
+
+    <script>
+      function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;
+
+        var y = document.forms["myForm"]["id1"].value;
+
+        if ((x == "", y == "")) {
+          alert("Name/ Age cannot be empty");
+          return false;
+        } else {
+          alert("Succesfully logged in");
+        }
+      }
+    </script>
+  </body>
+</html>
